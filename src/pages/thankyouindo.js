@@ -1,9 +1,9 @@
-"use client"; 
+"use client";
 import { useSearchParams } from "next/navigation";
 
 export default function ThankYouIndo() {
   const searchParams = useSearchParams();
-  
+
   const state = {
     namaLengkap: searchParams.get("namaLengkap"),
     namasekolah: searchParams.get("namasekolah"),
@@ -23,19 +23,27 @@ export default function ThankYouIndo() {
           <table className="thankyou-table">
             <tbody>
               <tr>
-                <td><strong>Anggota Tim</strong></td>
+                <td>
+                  <strong>Anggota Tim</strong>
+                </td>
                 <td>{state.namaLengkap || "-"}</td>
               </tr>
               <tr>
-                <td><strong>Nama Sekolah</strong></td>
+                <td>
+                  <strong>Nama Sekolah</strong>
+                </td>
                 <td>{state.namasekolah || "-"}</td>
               </tr>
               <tr>
-                <td><strong>Judul Proyek</strong></td>
+                <td>
+                  <strong>Judul Proyek</strong>
+                </td>
                 <td>{state.projectTitle || "-"}</td>
               </tr>
               <tr>
-                <td><strong>Kategori Kompetisi</strong></td>
+                <td>
+                  <strong>Kategori Kompetisi</strong>
+                </td>
                 <td>{state.category || "-"}</td>
               </tr>
             </tbody>
@@ -48,9 +56,9 @@ export default function ThankYouIndo() {
             </strong>
           </p>
 
-          <a href="/" className="btn-regist btn-action">
-            Kembali ke menu pendaftaran
-          </a>
+          <Link href="/" legacyBehavior>
+            <a className="btn-regist btn-action">Kembali ke menu pendaftaran</a>
+          </Link>
         </div>
       </section>
     </>

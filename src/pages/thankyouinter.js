@@ -1,15 +1,16 @@
-"use client"; 
+"use client";
 import { useSearchParams } from "next/navigation";
-  
+import Link from "next/link";
+
 export default function Thankyouinter() {
   const searchParams = useSearchParams();
-    
+
   const state = {
-      namaLengkap: searchParams.get("namaLengkap"),
-      namasekolah: searchParams.get("namasekolah"),
-      projectTitle: searchParams.get("projectTitle"),
-      category: searchParams.get("category"),
-    };
+    namaLengkap: searchParams.get("namaLengkap"),
+    namasekolah: searchParams.get("namasekolah"),
+    projectTitle: searchParams.get("projectTitle"),
+    category: searchParams.get("category"),
+  };
 
   return (
     <>
@@ -57,9 +58,11 @@ export default function Thankyouinter() {
             </strong>
           </p>
 
-          <a href="/" className="btn-regist btn-action">
-            Back to Registration Menu
-          </a>
+          <Link href="/" legacyBehavior>
+            <a className="btn-regist btn-action">
+              Back to Registration Menu
+            </a>
+          </Link>
         </div>
       </section>
     </>

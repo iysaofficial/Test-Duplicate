@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,14 +35,18 @@ export default function Home() {
             </div>
           </div>
           <div className="link-web mx-auto text-center">
-            <a href="/homeindo" className="btn-regist btn-action text-center me-lg-5 m-2">
+            <Link href="/homeindo" legacyBehavior>
+            <a className="btn-regist btn-action text-center me-lg-5 m-2">
               Indonesia Participant{" "}
               <i className="fa-solid fa-earth-americas"></i>
             </a>
-            <a href="/homeinter" className="btn-regist btn-action text-center me-lg-5 m-2">
+            </Link>
+            <Link href="/homeinter" legacyBehavior>
+            <a className="btn-regist btn-action text-center me-lg-5 m-2">
               International Participant{" "}
               <i className="fa-solid fa-earth-americas"></i>
             </a>
+            </Link>
           </div>
         </div>
       </section>
