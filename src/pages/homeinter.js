@@ -1,4 +1,4 @@
-import { internationalOfflineTerms, internationalOnlineTerms } from "./data/terms";
+import { internationalOfflineTerms, internationalOnlineTerms } from "@/component/data/terms";
 import { useState, useEffect } from "react";
 
 function HomeInter() {

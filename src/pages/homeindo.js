@@ -1,5 +1,5 @@
 
-import { indonesiaOfflineTerms, indonesiaOnlineTerms } from './data/terms';
+import { indonesiaOfflineTerms, indonesiaOnlineTerms } from '@/component/data/terms';
 import { useState, useEffect } from "react";
 
 
